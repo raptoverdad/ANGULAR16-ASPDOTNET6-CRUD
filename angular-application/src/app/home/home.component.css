@@ -1,0 +1,39 @@
+.homeWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 79vh;
+    font-family: 'Titillium Web', sans-serif;
+}
+.homeWrapper div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 79vh;
+    text-align: center;
+    border: 4px solid #6699FF;
+    background-color: #99B3FF;
+}
+.DemoNavButton{
+    width: 50vw;
+    height: 6vh;
+    background: #444;
+    border: 2px solid #fff;
+    color: #fff;
+}
+ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    border: 2px solid black;
+
+}
+ul li{
+    font-size: x-large;
+}
+

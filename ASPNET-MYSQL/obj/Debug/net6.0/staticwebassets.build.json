@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "fA48QFIzFVQMwuZsmMhcRbzSUP8eH7Q0F4UQgSnNDSI=",
+  "Source": "angular-aspnet-crud-docker",
+  "BasePath": "_content/angular-aspnet-crud-docker",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -1,0 +1,57 @@
+version: '3.8'
+networks:
+  dev-network:
+    driver: bridge
+services:
+  angular-aspdotnet-crud-webapi:
+    image: angular-aspdotnet-crud-webapi:v1
+    depends_on:
+      - mysql-db
+    container_name: angular-aspdotnet-crud-webapi
+    ports:
+      - "8088:80"
+    build:
+      context: ./ASPNET-MYSQL
+      dockerfile: Dockerfile
+    environment:
+      - DBHOST=mysql-db
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=123456
+      - MYSQL_DATABASE=angularaspcruddatabase
+      - Jwt_Issuer=BETTER-CODE-BETTER-APPS-INC
+      - Jwt_Audience=BETTER-CODE-BETTER-APPS-INC
+      - JWT_SECRET_KEY=12345678912345678912345678912345
+    networks:
+      - dev-network
+
+  mysql-db:
+    image: angular-aspdotnet-crud-database:v1
+    command: --default-authentication-plugin=mysql_native_password
+    container_name: angular-aspdotnet-crud-database
+    environment:
+      - MYSQL_DATABASE=angularaspcruddatabase
+      - MYSQL_ROOT_PASSWORD=123456
+    ports:
+      - "3309:3306"
+    build:
+      context: ./ASPNET-MYSQL/database-config
+      dockerfile: Dockerfile
+    restart: always
+    volumes:
+    - ./ASPNET-MYSQL/mysql-data:/var/lib/mysql
+    networks:
+     - dev-network
+
+  angular-app:
+    image: angular-aspdotnet-crud-angular-app:v1
+    container_name: angular-app
+    build:
+      context: ./ANGULAR-APP
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80" # Puedes mapear el puerto 80 del contenedor al puerto que prefieras en tu máquina local
+    networks:
+      - dev-network
+
+volumes:
+  mysql-data:

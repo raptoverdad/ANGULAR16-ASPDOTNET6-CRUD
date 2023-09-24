@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\angular-aspnet-crud-docker.props" />
+</Project>

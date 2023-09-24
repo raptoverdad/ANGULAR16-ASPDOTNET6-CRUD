@@ -1,0 +1,10 @@
+
+<div class="notAuthenticated" *ngIf="token == false">
+    <h1>ANGULAR 16.2.1 // ASP.NET CORE CRUD V.1 BY RODRIGO MIRANDA</h1>
+    <h1>Authenticated: </h1><h2>{{token}}</h2>
+</div>
+
+<div  class="Authenticated" *ngIf="token != false">
+    <h1>ANGULAR 16.2.1 // ASP.NET CORE CRUD V.1 BY RODRIGO MIRANDA</h1>
+    <h1>Authenticated: </h1><p>{{token}}</p>
+</div>
