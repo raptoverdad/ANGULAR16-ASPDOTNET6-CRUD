@@ -1,1 +1,6 @@
-ASPNET-MYSQL/mysql-data/mysql.sock
+mysql.sock
+.vs/
+bin/
+obj/
+*.dll
+*.exe
