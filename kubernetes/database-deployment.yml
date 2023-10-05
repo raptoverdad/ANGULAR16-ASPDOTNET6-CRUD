@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: db-deployment
+  namespace: angular-dotnet-crud
+spec:
+  selector:
+    matchLabels:
+      app: angular-dotnet-crud-database 
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: angular-dotnet-crud-database  
+    spec:
+      containers:
+      - image: raptoverdad/angular-dotnet-crud-database:master
+        name: angular-dotnet-crud-database
+        env:
+        - name: MYSQL_DATABASE
+          value: "angularaspcruddatabase"
+        - name: MYSQL_ROOT_PASSWORD
+          value: "123456"
+        ports:
+        - containerPort: 3306
+        volumeMounts:
+        - name: dotnet-volume-mount
+          mountPath: /var/lib/mysql
+      volumes:
+      - name: dotnet-volume
+        persistentVolumeClaim:
+          claimName: dotnet-pv-claim

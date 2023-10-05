@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dotnet-deployment
+  namespace: angular-dotnet-crud
+spec:
+  replicas: 3  # El número de réplicas que deseas
+  selector:
+    matchLabels:
+      app: dotnet-webapi
+  template:
+    metadata:
+      labels:
+        app: dotnet-webapi
+    spec:
+      containers:
+      - name: dotnet-webapi
+        image: raptoverdad/angular-dotnet-crud-back:master
+        env:
+        - name: DBHOST
+          value: "mysql-db"
+        - name: MYSQL_USER
+          value: "root"
+        - name: MYSQL_PASSWORD
+          value: "123456"
+        - name: MYSQL_DATABASE
+          value: "angularaspcruddatabase"
+        - name: Jwt_Issuer
+          value: "BETTER-CODE-BETTER-APPS-INC"
+        - name: Jwt_Audience
+          value: "BETTER-CODE-BETTER-APPS-INC"
+        - name: JWT_SECRET_KEY
+          value: "12345678912345678912345678912345"
+        ports:
+        - containerPort: 80

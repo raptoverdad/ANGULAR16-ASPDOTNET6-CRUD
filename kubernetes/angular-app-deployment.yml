@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: angular-app-deployment
+  namespace: angular-dotnet-crud
+spec:
+  replicas: 1  # Ajusta el número de réplicas según tus necesidades
+  selector:
+    matchLabels:
+      app: angular-app
+  template:
+    metadata:
+      labels:
+        app: angular-app
+    spec:
+      containers:
+      - name: app-container
+        image: raptoverdad/angular-dotnet-crud-front:master
+        ports:
+        - containerPort: 80
+
+          # Agrega más variables de entorno según tus necesidades

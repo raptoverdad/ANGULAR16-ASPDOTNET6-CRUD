@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: angular-aspdotnet-crud-webapi
+  namespace: angular-dotnet-crud
+spec:
+  selector:
+    app: dotnet-webapi
+  ports:
+    - protocol: TCP
+      port: 6000  # Puerto externo del LoadBalancer
+      targetPort: 80  # Puerto del servicio interno
+  type: LoadBalancer
