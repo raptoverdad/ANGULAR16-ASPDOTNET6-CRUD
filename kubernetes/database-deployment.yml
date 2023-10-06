@@ -28,6 +28,6 @@ spec:
         - name: dotnet-volume-mount
           mountPath: /var/lib/mysql
       volumes:
-      - name: dotnet-volume
+      - name: dotnet-volume-mount
         persistentVolumeClaim:
           claimName: dotnet-pv-claim
