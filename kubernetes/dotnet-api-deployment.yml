@@ -16,6 +16,7 @@ spec:
       containers:
       - name: dotnet-webapi
         image: raptoverdad/angular-dotnet-crud-back:master
+        imagePullPolicy: Always
         env:
         - name: DBHOST
           value: "mysql-db"

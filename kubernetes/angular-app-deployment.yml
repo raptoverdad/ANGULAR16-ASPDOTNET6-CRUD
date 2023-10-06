@@ -16,6 +16,7 @@ spec:
       containers:
       - name: app-container
         image: raptoverdad/angular-dotnet-crud-front:master
+        imagePullPolicy: Always
         ports:
         - containerPort: 80
 

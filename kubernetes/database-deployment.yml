@@ -17,6 +17,7 @@ spec:
       containers:
       - image: raptoverdad/angular-dotnet-crud-database:master
         name: angular-dotnet-crud-database
+        imagePullPolicy: Always
         env:
         - name: MYSQL_DATABASE
           value: "angularaspcruddatabase"
