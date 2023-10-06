@@ -9,13 +9,13 @@ jobs:
       matrix:
         include:
           - image: raptoverdad/angular-dotnet-crud-front
-            dockerfile: angular-application/dockerfile
+            dockerfile: angular-application/Dockerfile
             context: ./angular-application
           - image: raptoverdad/angular-dotnet-crud-back
-            dockerfile: ASPNET-MYSQL/dockerfile
+            dockerfile: ASPNET-MYSQL/Dockerfile
             context: ./ASPNET-MYSQL
           - image: raptoverdad/angular-dotnet-crud-database
-            dockerfile: ASPNET-MYSQL/database-config/dockerfile
+            dockerfile: ASPNET-MYSQL/database-config/Dockerfile
             context: ./ASPNET-MYSQL/database-config
     steps:
       - name: Checkout code
