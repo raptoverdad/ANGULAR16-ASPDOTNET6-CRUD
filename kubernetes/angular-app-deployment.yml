@@ -5,6 +5,8 @@ metadata:
   namespace: angular-dotnet-crud
 spec:
   replicas: 1 
+  matchLabels:
+    app: angular-app
   template:
     metadata:
       labels:
