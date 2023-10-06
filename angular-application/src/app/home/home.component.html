@@ -4,13 +4,13 @@
     <div>
         <h2>Click bellow to authenticate</h2>
         <button (click)="Authenticate()">Authenticate</button>
-        <div *ngIf="isLoading.authenticate" class="loading-indicator">Autenticando...</div>
+        <label for="" *ngIf="isLoading.authenticate">Autenticando...</label>
     </div>
 
     <div>
         <h2>Click here to GET users from database</h2>
         <button (click)="GetUsers()">Get users</button>
-        <div *ngIf="isLoading.getUsers" class="loading-indicator">Cargando...</div>
+        <label for="" *ngIf="isLoading.getUsers">Cargando...</label>
         <h3 *ngIf="Users != false">USERS:</h3>
         <ul  *ngIf="Users != false">
             <li *ngFor="let user of Users">-Name:{{ user.name + " - Age:" + user.age }}</li>
@@ -22,7 +22,7 @@
         <p>username:</p>
         <input type="text"  [(ngModel)]="deleteUser">
         <input type="button" (click)="DeleteUser()" value="Delete user">
-        <div *ngIf="isLoading.deleteUser" class="loading-indicator">Cargando...</div>
+        <label for="" *ngIf="isLoading.deleteUser">Cargando...</label>
         <h3 *ngIf="deleteUserResult != false">¡user deleted Successfully!</h3>
     </div>
 
@@ -33,7 +33,7 @@
         <p>age:</p>
         <input type="text"  [(ngModel)]="insertAge">
         <input type="button"(click)="InsertUser()" value="Insert user">
-        <div *ngIf="isLoading.insertUser" class="loading-indicator">Cargando...</div>
+        <label for="" *ngIf="isLoading.insertUser">Cargando...</label>
         <h3 *ngIf="insertUserResult != false">¡User inserted Successfully!</h3>
     </div>
 
@@ -42,7 +42,7 @@
         <p>username:</p>
         <input type="text" [(ngModel)]="getUser">
         <input type="button" (click)="GetUserByName()" value="Get user">
-        <div *ngIf="isLoading.getUserByName" class="loading-indicator">Cargando...</div>
+        <label for="" *ngIf="isLoading.getUserByName">Cargando...</label>
         <h3 *ngIf="getUserResult != false">USER:</h3>
         <ul  *ngIf="getUserResult != false">
             <li>-Name:{{ getUserResult.name + " "+"-Age:"+getUserResult.age}}</li>

@@ -7,8 +7,7 @@
   },
   "servers": [
     {
-      "url": "http://angular-aspdotnet-crud-webapi", 
-      "description": "Change the url to your server's location. make shure to clone the server i provided for this app to work as well: https://github.com/raptoverdad/angular16-asp.netcore-crud-APISERVICE.git"
+      "url": "http://a6f65202cff19422abf34be6d617f0d8-1921506352.sa-east-1.elb.amazonaws.com"
     }
   ],
   "paths": {
