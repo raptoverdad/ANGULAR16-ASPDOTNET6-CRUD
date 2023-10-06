@@ -4,9 +4,10 @@ metadata:
   name: angular-app-deployment
   namespace: angular-dotnet-crud
 spec:
+  selector:
+    matchLabels:
+      app: angular-app
   replicas: 1 
-  matchLabels:
-    app: angular-app
   template:
     metadata:
       labels:
