@@ -4,7 +4,7 @@ metadata:
   name: dotnet-deployment
   namespace: angular-dotnet-crud
 spec:
-  replicas: 3  # El número de réplicas que deseas
+  replicas: 3  
   selector:
     matchLabels:
       app: dotnet-webapi
