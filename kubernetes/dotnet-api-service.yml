@@ -8,6 +8,6 @@ spec:
     app: dotnet-webapi
   ports:
     - protocol: TCP
-      port: 6000  # Puerto externo del LoadBalancer
+      port: 80  # Puerto externo del LoadBalancer
       targetPort: 80  # Puerto del servicio interno
   type: LoadBalancer
