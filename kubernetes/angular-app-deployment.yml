@@ -4,8 +4,7 @@ metadata:
   name: angular-app-deployment
   namespace: angular-dotnet-crud
 spec:
-  replicas: 1  # Ajusta el número de réplicas según tus necesidades
-  selector:
+  replicas: 1 
     matchLabels:
       app: angular-app
   template:
