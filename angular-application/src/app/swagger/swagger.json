@@ -7,7 +7,7 @@
   },
   "servers": [
     {
-      "url": "http://a6f65202cff19422abf34be6d617f0d8-1921506352.sa-east-1.elb.amazonaws.com"
+      "url": "http://a6f65202cff19422abf34be6d617f0d8-1921506352.sa-east-1.elb.amazonaws.com:6000"
     }
   ],
   "paths": {
