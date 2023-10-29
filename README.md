@@ -3,7 +3,7 @@ Una aplicación web que se encarga de autenticar, insertar, eliminar y recoger d
 ![Aplicación](https://res.cloudinary.com/debvhmcid/image/upload/v1698132363/angular-dotnet-verde-completo_kf7vwp.jpg)
 
 # ¿COMO Y DONDE INTERACTURAR CON ELLA?
-A)Puedes ingresar al siguiente link para visitar la versión publica:
+A)Puedes ingresar al siguiente link para visitar la versión publica: https://angular-dotnet-crud-front.netlify.app/home
 B)tambien puedes desplegar esta aplicación en tu computadora local. para hacerlo, clona el repositorio, ingresa a la carpeta y en la consola escribe * docker-compose build * para construir las imagenes necesarias para el proyecto y acto seguido, ejecuta * docker-compose up * para correr la app. visita el puerto local 8080 y listo.
 
 # INSTRUCCIONES DE USO
